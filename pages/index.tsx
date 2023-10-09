@@ -3,6 +3,8 @@ import { GetStaticProps } from "next"
 import Layout from "../components/Layout"
 import Post, { PostProps } from "../components/Post"
 
+let greeting = "hi"
+
 export const getStaticProps: GetStaticProps = async () => {
   const feed = [
     {
@@ -16,9 +18,9 @@ export const getStaticProps: GetStaticProps = async () => {
       },
     },
   ]
-  return { 
-    props: { feed }, 
-    revalidate: 10 
+  return {
+    props: { feed },
+    revalidate: 10
   }
 }
 
